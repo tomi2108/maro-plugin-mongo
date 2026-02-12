@@ -19,6 +19,9 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "zod": "3.25.57"
+  },
   "devDependencies": {
     "typescript": "^5.9.3",
     "@typescript-eslint/eslint-plugin": "8.54.0",

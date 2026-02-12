@@ -1,8 +1,13 @@
 import { MigrationCommand } from "./commands/migration";
 import { ScriptCommand } from "./commands/script";
+import { MigrationsConfig } from "./config";
+import { PluginExport } from "../../../dist/lib";
 
-export default {
+const Plugin: PluginExport = {
   name: "maro-plugin-mongo",
+  configs: [
+    new MigrationsConfig()
+  ],
   commands: [
     {
       name: "mongo",
@@ -14,3 +19,5 @@ export default {
     }
   ]
 };
+
+export default Plugin;
