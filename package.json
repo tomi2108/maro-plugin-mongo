@@ -13,7 +13,13 @@
     "@maro/maro": "2.0.0"
   },
   "maro": {
-    "plugin": "./dist/src/index.js"
+    "plugin": "./dist/src/index.js",
+    "requires":{
+      "maro-plugin-telefonica": {
+        "version":"1.0.0",
+        "source":"1232131"
+      }
+    }
   },
   "keywords": [],
   "author": "",
