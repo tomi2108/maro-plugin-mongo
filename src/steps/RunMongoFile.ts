@@ -4,10 +4,10 @@ import {
   Config,
   Dir,
   ExecutionContext,
+  Project,
   TextFile,
   ValidateConfig,
-  WorkflowStep,
-  Project
+  WorkflowStep
 } from "@maro/maro";
 
 type Reads = {
@@ -40,7 +40,7 @@ export class RunMongoFile extends WorkflowStep<Reads, Writes> {
       )).reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
     const output = await new CommandRunner().run(
-      "node",
+      process.execPath,
       [mongo_file.path],
       {
         env,
