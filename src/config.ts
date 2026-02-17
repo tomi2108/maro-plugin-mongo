@@ -1,7 +1,6 @@
 import z from "zod/v4";
 
-import { ConfigSection } from "../../../dist/lib";
-import { ConfigHelp } from "../../../dist/lib/config/interface";
+import { ConfigHelp, ConfigSection } from "@maro/maro";
 
 const schema = z.object({
   secrets: z.array(z.string()).optional()
@@ -17,7 +16,7 @@ export class MigrationsConfig implements ConfigSection {
 
   help(): ConfigHelp[] {
     return [
-      { key: "secrets", description: "Secrets required for MongoDb migrations" }
+      { key: "secrets", description: "Secrets required for MongoDb migrations", type: "string[]" }
     ];
   }
 

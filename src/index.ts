@@ -1,13 +1,16 @@
+import { ConfigRegistry, PluginExport } from "@maro/maro";
+
 import { MigrationCommand } from "./commands/migration";
 import { ScriptCommand } from "./commands/script";
 import { MigrationsConfig } from "./config";
-import { PluginExport } from "../../../dist/lib";
 
 const Plugin: PluginExport = {
   name: "maro-plugin-mongo",
-  configs: [
-    new MigrationsConfig()
-  ],
+  onLoad() {
+    ConfigRegistry.register(
+      new MigrationsConfig()
+    );
+  },
   commands: [
     {
       name: "mongo",
