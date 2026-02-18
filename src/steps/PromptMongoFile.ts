@@ -1,11 +1,11 @@
 import {
-  Dir,
-  WorkflowOptions,
-  WorkflowStep,
   Config,
+  Dir,
   ExecutionContext,
   TextFile,
-  ValidateConfig
+  ValidateConfig,
+  WorkflowOptions,
+  WorkflowStep
 } from "@maro/maro";
 
 type Writes = { mongo_file: TextFile };
