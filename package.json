@@ -1,0 +1,36 @@
+{
+  "name": "maro-plugin-mongo",
+  "version": "1.0.1",
+  "main": "./dist/lib/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "start": "node ./dist/src/index.js",
+    "clean": "rm -rf node_modules package-lock.json"
+  },
+  "peerDependencies": {
+    "@maro/maro": "2.0.0"
+  },
+  "maro": {
+    "plugin": "./dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongoose": "^9.2.4",
+    "zod": "3.25.57"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "2.6.5",
+    "@typescript-eslint/eslint-plugin": "8.54.0",
+    "eslint": "8.57.1",
+    "eslint-plugin-de-morgan": "2.0.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-math": "0.13.1",
+    "eslint-plugin-promise": "7.2.1",
+    "eslint-plugin-unused-imports": "4.3.0",
+    "typescript": "^5.9.3"
+  }
+}
