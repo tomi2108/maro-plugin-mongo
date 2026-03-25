@@ -12,13 +12,20 @@
     "@maro/maro": "2.0.0"
   },
   "maro": {
-    "plugin": "./dist/src/index.js"
+    "plugin": "./dist/src/index.js",
+    "requires": {
+      "maro-plugin-oc": {
+        "version": "1.0.5",
+        "source": "https://github.com/Maro-Ecosystem/maro-plugin-oc.git"
+      }
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "maro-plugin-oc": "1.0.5",
     "mongoose": "^9.2.4",
     "zod": "3.25.57"
   },

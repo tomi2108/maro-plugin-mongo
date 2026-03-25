@@ -4,12 +4,12 @@ import {
   Config,
   Dir,
   ExecutionContext,
-  Project,
-  PromptOcSecrets,
   TextFile,
   ValidateConfig,
   WorkflowStep
 } from "@maro/maro";
+
+import{ Project, PromptOcSecrets } from "maro-plugin-oc"
 
 type Reads = {
   mongo_file: TextFile;
