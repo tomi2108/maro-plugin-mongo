@@ -46,9 +46,9 @@ export class RunMongoFile extends WorkflowStep<Reads, Writes> {
           )
       )).reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
-    const output = await new CommandRunner().run(
-      process.execPath,
-      [mongo_file.path],
+    const output = await new CommandRunner(process.execPath)
+    .append(mongo_file.path)
+    .run(
       {
         env,
         supressStdout: true,
